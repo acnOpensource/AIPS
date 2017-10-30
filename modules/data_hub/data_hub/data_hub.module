@@ -1,0 +1,16 @@
+<?php
+use Drupal\Component\Utility\SafeMarkup;
+
+function data_hub_theme($existing, $type, $theme, $path) {
+  return array(    
+    'datahublist' => array(
+      'variables'=> array('record' => array()),
+    ),
+);
+}	
+/*function datahub_user_login($account) {
+	$url = "/home";
+	$response = new Symfony\Component\HttpFoundation\RedirectResponse($url);
+	$response->send();
+	return;
+}*/

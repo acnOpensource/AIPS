@@ -1,0 +1,7 @@
+insights.analytics:
+  path: '/analytics-and-insights'
+  defaults:
+    _controller: '\Drupal\insights\Controller\InsightsPageController::insights'
+    _title: ''
+  requirements:
+    _user_is_logged_in: 'TRUE'

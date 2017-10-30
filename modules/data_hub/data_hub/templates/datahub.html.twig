@@ -1,0 +1,62 @@
+<div class="page-content">
+  {% if(nodid is null) %}
+    <div class="row" id="filterArea">
+      <div class="col-md-4 col-lg-3 col-sm-4 col-xs-12 filterDropdown">
+        <select class="form-control">
+          <option value="">–All Category–</option>
+          {% for keyslection in selection %}
+            <option value=".{{ keyslection.name|replace({' ':''}) }}">{{ keyslection.name }}</option>
+          {% endfor %}
+        </select>
+      </div>
+      <div class="col-md-8 col-lg-9 col-sm-8 col-xs-12">
+        <form class="form-inline">
+          {% for keycategory in category %}
+            <div class="checkbox-wrapper">
+              <div class="checkbox">
+                <input type="checkbox" value=".{{ keycategory.name|replace({' ': ''})|lower }}"
+                       id="{{ keycategory.name|replace({' ': ''})|lower }}"
+                       rel="{{ keycategory.name|replace({' ': ''})|lower }}">
+                <label class="clearfix"
+                       for="{{ keycategory.name|replace({' ': ''})|lower }}">{{ keycategory.name }}</label>
+              </div>
+            </div>
+          {% endfor %}
+        </form>
+      </div>
+    </div>
+  {% else %}
+    <div class="row" id="filterArea" style="padding: 20px;font-size: 16px;"> <a href="/insights"> << Back to Insights</a></div>
+    
+  {% endif %}
+  <!-- #filterArea end here -->
+  <div id="FilterContentSection">
+    <div id="CarouselWrapper" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators"></ol>
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+        {% for key in record %}
+          <div
+            class="offering-section {{ key.name|replace({' ': ''})|lower }} {{ key.taxnomyselectiondata_name|replace({' ':''}) }}">
+            <div class="offering-image">
+              <a href="{{ key.field_offerings_link_value }}" target="_blank">
+                <img src="{{ file_url(key.uri| image_style('offering_247_153_')) }}"/>
+                <div class="offering-heading">{{ key.title }}</div>
+              </a>
+            </div>
+            <div class="offering-content">
+              <p>{{ key.field_offering_body_value | raw }} </p>
+            </div>
+          </div>
+        {% endfor %}
+
+
+        <!-- item class close here -->
+      </div>
+      <!-- carousel-inner close here -->
+    </div>
+    <!-- #CarouselWrapper close here -->
+  </div>
+  <!-- #FilterContentSection close here -->
+</div>

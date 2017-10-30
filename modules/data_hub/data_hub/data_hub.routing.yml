@@ -1,0 +1,8 @@
+data_hub.datahublist:
+  path: 'datahublist'
+  defaults:
+    _controller: '\Drupal\data_hub\Controller\DataHubController::datahublist'
+    _title: ''
+  requirements:
+    _access: 'TRUE'
+

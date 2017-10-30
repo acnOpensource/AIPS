@@ -1,0 +1,4 @@
+name: Insights
+description: 'Analytics & Insights custom module for AIPS portal'
+core: '8.x'
+type: 'module'

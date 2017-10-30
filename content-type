@@ -6,6 +6,15 @@ Content Types-
 	- Thumbnail (field_thumbnail)[Image]
 	- Data Lake URL (field_data_lake_url)[Link]
 
+2. Analytics and Insights (analytics_and_insights)
+	- Insights Type (field_insights_type) [Entity reference] -> Taxonomy (Analytics and Insights Taxonomy)
+	- Insights Sub Type (field_insights_sub_type) [Entity reference] -> Taxonomy (Insights Sub Type)
+	- Body (body)[Text (formatted, long, with summary)]
+	- Thumbnail (field_thumbnail)[Image]
+	- Insights URL (field_data_lake_url)[Link]
+
 ------------------------------------------------------------------------------------------
 Taxonomy Types
 1. Data Lake Taxonomy (data_lake_taxonomy)
+2. Analytics and Insights Taxonomy (analytics_and_insights_taxonomy)
+3. Insights Sub Type (insights_sub_type)
