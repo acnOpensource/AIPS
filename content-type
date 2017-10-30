@@ -1,0 +1,11 @@
+Field Name---Field Machine Name--Field Type
+Content Types-
+1. Data Lake (data_lake)
+	- Data Lake Type (field_data_lake_type) [Entity reference] -> Taxonomy (Data Lake Taxonomy)
+	- Body (body)[Text (formatted, long, with summary)]
+	- Thumbnail (field_thumbnail)[Image]
+	- Data Lake URL (field_data_lake_url)[Link]
+
+------------------------------------------------------------------------------------------
+Taxonomy Types
+1. Data Lake Taxonomy (data_lake_taxonomy)

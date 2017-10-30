@@ -1,0 +1,7 @@
+data_lake.datalake:
+  path: '/data-lake'
+  defaults:
+    _controller: '\Drupal\data_lake\Controller\DataLakePageController::dataList'
+    _title: ''
+  requirements:
+    _user_is_logged_in: 'TRUE'

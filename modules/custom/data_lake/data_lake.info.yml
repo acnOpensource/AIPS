@@ -1,0 +1,4 @@
+name: Data Lake
+description: 'Data Lake custom module for AIPS portal'
+core: '8.x'
+type: 'module'
